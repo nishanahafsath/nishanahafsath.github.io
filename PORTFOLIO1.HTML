@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishana Hafsath KT - Data Science Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            float: left;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skill {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+        }
+
+        .experience {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* For absolute positioning of the logo */
+        }
+
+        .experience .company-logo {
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .cta-button {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #27ae60;
+        }
+
+        .dashboard-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-item {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .workflow-img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .certification-item {
+            width: 30%;
+            /* Adjust as needed to fit certificates in a row */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .certification-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .certification-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="section">
+            <img src="YOUR_ONLINE_PATH/Nishana_photo.jpg" alt="Nishana Hafsath KT" class="profile-img">
+            <h1>Nishana Hafsath KT</h1>
+            <p>Data Science Professional | AI/ML Specialist</p>
+            <a href="https://github.com/nishanahafsath" class="cta-button" target="_blank"><i
+                    class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/nishana-hafsath-kt/" class="cta-button" target="_blank"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:nishanahafsath59@gmail.com" class="cta-button"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:+971553637578" class="cta-button"><i class="fas fa-phone"></i> +971 553637578</a>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Data Science professional with a passion for leveraging data to drive informed business decisions and create
+                innovative solutions. Proven ability to translate complex data into actionable insights. Skilled in machine
+                learning, AI, and business intelligence with expertise in developing predictive models and interactive
+                dashboards.</p>
+            <ul>
+                <li><strong>Location:</strong> Dubai, UAE</li>
+                <li><strong>Date of Birth:</strong> November 2, 2000</li>
+                <li><strong>Nationality:</strong> Indian</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+        
+            <h3>Data Science & Machine Learning</h3>
+            <div class="skills">
+                <span class="skill">Python (Scikit-learn, Pandas, NumPy)</span>
+                <span class="skill">R (ggplot2, dplyr)</span>
+                <span class="skill">Machine Learning (Regression, Classification, Clustering)</span>
+                <span class="skill">Deep Learning (TensorFlow, PyTorch, Keras)</span>
+                <span class="skill">Natural Language Processing (NLP)</span>
+                <span class="skill">Computer Vision (OpenCV)</span>
+            </div>
+        
+            <h3>Cloud Computing</h3>
+            <div class="skills">
+                <span class="skill">Google Cloud Platform (GCP)</span>
+                <span class="skill">Amazon Web Services (AWS)</span>
+                <span class="skill">Microsoft Azure</span>
+            </div>
+        
+            <h3>Data Visualization & Business Intelligence</h3>
+            <div class="skills">
+                <span class="skill">Power BI</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Google Looker Studio</span>
+                <span class="skill">Matplotlib</span>
+                <span class="skill">Seaborn</span>
+            </div>
+        
+            <h3>Database Management</h3>
+            <div class="skills">
+                <span class="skill">SQL (MySQL, PostgreSQL)</span>
+                <span class="skill">NoSQL (MongoDB)</span>
+            </div>
+        
+            <h3>Tools & Technologies</h3>
+            <div class="skills">
+                <span class="skill">Git</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Agile Methodologies</span>
+                <span class="skill">WordPress</span>
+                <span class="skill">Figma</span>
+            </div>
+        </section>
+        
+        
+
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="experience">
+                <img src="YOUR_ONLINE_PATH/beamlytics_logo.jpg" alt="Beamlytics Logo" class="company-logo">
+                <h3>Data Scientist - Beamlytics, USA (Apr 2024 - Jan 2025)</h3>
+                <p>Led data science initiatives leveraging cloud platforms to drive business growth and operational efficiency:</p>
+                <ul>
+                    <li>Developed and deployed machine learning models for demand forecasting, achieving a 35% improvement in
+                        inventory optimization across 100+ product categories.</li>
+                    <li>Implemented customer segmentation and churn prediction models, enhancing customer engagement by 40%.</li>
+                    <li>Created an LSTM-based sentiment analysis system for airline customer reviews, identifying key service quality
+                        trends.</li>
+                    <li>Fine-tuned a BERT-based language model to analyze hotel reviews, extracting actionable insights on guest
+                        satisfaction.</li>
+                    <li>Developed computer vision applications for visual merchandising optimization.</li>
+                    <li>Implemented anomaly detection algorithms for fraud prevention.</li>
+                </ul>
+                <p><strong>Models Developed:</strong></p>
+                <ul>
+                    <li>Customer Churn Prediction</li>
+                    <li>Demand Forecasting</li>
+                    <li>Sales Analysis</li>
+                    <li>Fraud Detection</li>
+                </ul>
+                <p><strong>Key Achievements:</strong></p>
+                <ul>
+                    <li>Improved forecast accuracy by 25% using ensemble methods (Random Forest, XGBoost, and LSTM).</li>
+                    <li>Reduced customer churn by 15% through targeted retention strategies derived from predictive models.</li>
+                    <li>Increased operational efficiency by 30% through process automation and optimization.</li>
+                </ul>
+                <p><strong>Technologies used:</strong> Python, TensorFlow, PyTorch, Scikit-learn, NLP, Computer Vision, Google Cloud
+                    Platform, Power BI, SQL</p>
+            </div>
+            <div class="experience">
+                <img src="YOUR_ONLINE_PATH/tcs-ion-training-center-innoflux-technology-raj-nagar-ghaziabad-ghaziabad-127iokgc3l.jpg"
+                    alt="TCS ion Logo" class="company-logo">
+                <h3>AI ML Intern - TCS ion, Trivandrum (Sep 2023 - Dec 2023)</h3>
+                <p>Gained hands-on experience in AI and ML applications, focusing on:</p>
+                <ul>
+                    <li>Developed an automated sentiment analysis system for airline customer reviews using a deep learning LSTM model
+                        to classify sentiments and identify trends in service quality.</li>
+                    <li>Implemented a BERT-based LLM for analyzing 15 hotels' reviews, fine-tuning the model for sentiment
+                        classification, and extracting actionable insights regarding guest satisfaction.</li>
+                    <li>Visualized sentiment patterns and key themes using Power BI and Matplotlib, enabling data-driven
+                        decision-making for service improvements.</li>
+                </ul>
+                <img src="YOUR_ONLINE_PATH/workflow.jpg" alt="TCS Ion Internship Workflow" class="workflow-img">
+                <p><strong>Technologies used:</strong> Python, TensorFlow, BERT, LSTM, Power BI, Matplotlib</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Rice Leaf Health Detection using CNN</h3>
+                <p><strong>Objective:</strong> Develop a system to analyze rice leaf health using computer vision techniques.</p>
+                <p><strong>Workflow:</strong></p>
+                <ol>
+                    <li><strong>Data Collection:</strong> Gathered 1,700+ images of rice leaves in various health conditions.</li>
+                    <li><strong>Preprocessing:</strong> Conducted exploratory data analysis (EDA) and image preprocessing to optimize dataset
+                        quality.</li>
+                    <li><strong>Model Development:</strong> Built and fine-tuned a CNN architecture (AlexNet) using TensorFlow.</li>
+                    <li><strong>Training and Validation:</strong> Trained the model on the preprocessed dataset, achieving 82% accuracy in
+                        classifying nutrient deficiencies, diseases, and pest infestation.</li>
+                    <li><strong>Deployment:</strong> Implemented the model for real-time analysis of rice leaf images on Google Cloud
+                        Platform.</li>
+                </ol>
+                <p><strong>Technologies used:</strong> Python, TensorFlow, OpenCV, NumPy, Matplotlib, Google Cloud Platform</p>
+                <p><strong>Impact:</strong> Demonstrated proficiency in computer vision and deep learning, resulting in a scalable model
+                    for agricultural applications that can potentially improve crop yield and reduce losses due to diseases.</p>
+            </div>
+            <div class="project">
+                <h3>Brain Tumor Detection using YOLOv8</h3>
+                <p><strong>Objective:</strong> Develop an advanced image segmentation system for accurate brain tumor detection.</p>
+                <p><strong>Workflow:</strong></p>
+                <ol>
+                    <li><strong>Data Preparation:</strong> Collected and preprocessed 1000+ MRI brain scan images, applying data
+                        augmentation techniques to enhance model robustness.</li>
+                    <li><strong>Model Selection:</strong> Chose YOLOv8 for its high performance in object detection tasks and ability to
+                        handle small object detection.</li>
+                    <li><strong>Model Training:</strong> Trained YOLOv8 on the prepared dataset using transfer learning, implementing data
+                        augmentation techniques to prevent overfitting.</li>
+                    <li><strong>Hyperparameter Tuning:</strong> Optimized model performance through extensive hyperparameter tuning using
+                        Bayesian optimization.</li>
+                    <li><strong>Validation and Testing:</strong> Evaluated the model's accuracy and reliability in tumor detection,
+                        achieving a 95% accuracy rate on the test set.</li>
+                    <li><strong>Deployment:</strong> Deployed the model on Google Cloud Platform for scalable inference.</li>
+                </ol>
+                <p><strong>Technologies used:</strong> Python, YOLOv8, PyTorch, OpenCV, Scikit-image, Google Cloud Platform</p>
+                <p><strong>Impact:</strong> Enhanced diagnostic accuracy for brain tumor detection, potentially reducing misdiagnosis rates
+                    and contributing to more effective medical imaging applications in clinical settings.</p>
+            </div>
+            <div class="project">
+                <h3>Sentiment Analysis on Swiggy Reviews</h3>
+                <p><strong>Objective:</strong> Analyze customer sentiment from Swiggy reviews to provide actionable insights for business
+                    improvement.</p>
+                <p><strong>Workflow:</strong></p>
+                <ol>
+                    <li><strong>Data Collection:</strong> Scraped over 20,000 customer reviews from Swiggy using Python and BeautifulSoup.
+                    </li>
+                    <li><strong>Data Preprocessing:</strong> Cleaned and preprocessed text data, handling missing values, removing
+                        duplicates, and applying text normalization techniques.</li>
+                    <li><strong>Exploratory Data Analysis:</strong> Conducted in-depth EDA to understand review distribution, common
+                        phrases, and initial sentiment trends.</li>
+                    <li><strong>Model Development:</strong> Implemented a BERT-based NLP model for sentiment classification, fine-tuning the
+                        pre-trained model on the Swiggy dataset.</li>
+                    <li><strong>Training and Evaluation:</strong> Trained the model using k-fold cross-validation, achieving 90% accuracy in
+                        sentiment classification.</li>
+                    <li><strong>Insight Generation:</strong> Analyzed sentiment trends and key themes using topic modeling (LDA) to provide
+                        actionable insights for business strategies.</li>
+                    <li><strong>Visualization:</strong> Created interactive dashboards using Power BI to present findings to stakeholders.</li>
+                </ol>
+                <p><strong>Technologies used:</strong> Python, BERT, Hugging Face Transformers, Pandas, NLTK, Scikit-learn, Power BI
+                </p>
+                <p><strong>Impact:</strong> Provided deep insights into customer satisfaction trends, leading to targeted marketing
+                    strategies and product enhancements that improved overall customer satisfaction scores by 15%.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <img src="YOUR_ONLINE_PATH/ML_AI_certificate.jpg"
+                        alt="Certified Specialist in Machine Learning and AI, ICT Academy Kerala">
+                    <p>Certified Specialist in Machine Learning and AI, ICT Academy Kerala</p>
+                </div>
+                <div class="certification-item">
+                    <img src="YOUR_ONLINE_PATH/digital_marketing_certificate.jpg"
+                        alt="Fundamentals of Digital Marketing, Google">
+                    <p>Fundamentals of Digital Marketing, Google</p>
+                </div>
+                <div class="certification-item">
+                    <img src="YOUR_ONLINE_PATH/data_analytics_certificate.jpg"
+                        alt="Accenture North America - Data Analytics and Visualization Job Simulation, Forage">
+                    <p>Accenture North America - Data Analytics and Visualization Job Simulation, Forage</p>
+                </div>
+            </div>
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <img src="YOUR_ONLINE_PATH/power_bi_certificate.jpg"
+                        alt="PwC Switzerland - Power BI Job Simulation, Forage">
+                    <p>PwC Switzerland - Power BI Job Simulation, Forage</p>
+                </div>
+                <div class="certification-item">
+                    <img src="YOUR_ONLINE_PATH/generative_ai_certificate.jpg"
+                        alt="Career Essentials in Generative AI, Microsoft and LinkedIn">
+                    <p>Career Essentials in Generative AI, Microsoft and LinkedIn</p>
+                </div>
+                <div class="certification-item">
+                    <img src="YOUR_ONLINE_PATH/cloud_engineer_certificate.jpg"
+                        alt="Associate Cloud Engineer Track, Google Cloud">
+                    <p>Associate Cloud Engineer Track, Google Cloud</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <p><strong>MSc Data Analytics and Computational Science</strong><br>
+                Kerala University of Digital Sciences Innovation and Technology, Trivandrum, Kerala (2022 – 2024)</p>
+            <p><strong>BSc Physics</strong><br>
+                University of Calicut, Kerala (2019 – 2022)</p>
+        </section>
+
+        <footer>
+            <p>© 2025 Nishana Hafsath KT. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
