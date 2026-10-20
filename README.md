@@ -2,7 +2,7 @@
 
 Personal portfolio site for Nishana Hafsath, Power BI Specialist and Data Analyst based in Dubai, UAE.
 
-**Live site:** https://YOUR-GITHUB-USERNAME.github.io/
+**Live site:** https://nishanahafsath.github.io/
 
 ## What's here
 
