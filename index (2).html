@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Nishana Hafsath | Data Analyst & BI Developer">
+<meta property="og:description" content="Dashboards, data analytics, machine learning and AI. Available for freelance projects.">
+<meta property="og:image" content="https://nishanahafsath.github.io/walmart-sales.jpg">
+<title>Nishana Hafsath Portfolio</title>
+<meta name="description" content="Nishana Hafsath, data analyst and BI developer in Dubai. Dashboards in Power BI, Tableau and Looker Studio, data analytics, machine learning and AI projects. Available for freelance work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: dark hero band with a dashboard collage, four practice-area tiles, tabbed work explorer, services, record, contact band. */
+:root {
+  --bg: #F3F5F7;
+  --surface: #FFFFFF;
+  --ink: #0E1A26;
+  --muted: #586776;
+  --line: #DDE3E9;
+  --band: #0A1622;
+  --band-2: #12243A;
+  --band-ink: #E9EEF3;
+  --band-muted: #9DB0C2;
+  --accent: #E8A800;
+  --accent-ink: #1A1300;
+  --viz: #C98700;
+  --ana: #0F8F86;
+  --ml: #6E5CE6;
+  --ai: #E0563F;
+  --shadow: 0 1px 2px rgba(14, 26, 38, .06), 0 10px 30px rgba(14, 26, 38, .08);
+  --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1218; --surface: #121C25; --ink: #E7ECF1; --muted: #93A3B1; --line: #223140;
+    --band: #060D14; --band-2: #0F1D2C; --band-ink: #E9EEF3; --band-muted: #9DB0C2;
+    --accent: #F2B705; --accent-ink: #1A1300; --viz: #F2B705; --ana: #33C3B8; --ml: #9D8FFF; --ai: #FF7A63;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 30px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1218; --surface: #121C25; --ink: #E7ECF1; --muted: #93A3B1; --line: #223140;
+  --band: #060D14; --band-2: #0F1D2C; --band-ink: #E9EEF3; --band-muted: #9DB0C2;
+  --accent: #F2B705; --accent-ink: #1A1300; --viz: #F2B705; --ana: #33C3B8; --ml: #9D8FFF; --ai: #FF7A63;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 30px rgba(0, 0, 0, .3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--band); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--band); color: var(--band-ink); border-bottom: 1px solid rgba(255,255,255,.07); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { font-family: var(--display); font-variation-settings: "wdth" 115; font-weight: 800; font-size: 19px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand i { width: 32px; height: 32px; border-radius: 7px; background: var(--accent); display: grid; place-items: center; font-style: normal; color: var(--accent-ink); font-size: 12px; font-weight: 800; }
+.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; font-size: 14px; align-items: center; }
+.nav ul a { text-decoration: none; color: var(--band-muted); }
+.nav ul a:hover { color: var(--band-ink); }
+.nav .hire { background: var(--accent); color: var(--accent-ink); padding: 7px 14px; border-radius: 6px; font-weight: 600; }
+.nav .hire:hover { color: var(--accent-ink); filter: brightness(1.06); }
+@media (max-width: 780px) { .nav ul li.opt { display: none; } }
+
+/* Hero */
+.hero { background: radial-gradient(1100px 520px at 88% -12%, var(--band-2), transparent 62%), var(--band); color: var(--band-ink); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 48px; align-items: center; padding-block: clamp(44px, 7vw, 84px) 36px; }
+.avail { display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); font-size: 13px; }
+.avail::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3CC07D; box-shadow: 0 0 0 4px rgba(60,192,125,.2); flex: none; }
+.hero h1 { font-variation-settings: "wdth" 118; font-weight: 900; font-size: clamp(46px, 7.4vw, 92px); line-height: .95; letter-spacing: -.015em; margin-top: 22px; }
+.hero h1 span { display: block; color: var(--accent); }
+.who { margin-top: 16px; font-family: var(--mono); font-size: clamp(13px, 1.4vw, 15px); color: var(--band-ink); letter-spacing: .06em; text-transform: uppercase; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.who b { font-weight: 500; color: var(--accent); }
+.tagline { font-family: var(--display); font-variation-settings: "wdth" 104; font-weight: 700; font-size: clamp(20px, 2.4vw, 27px); line-height: 1.25; margin: 22px 0 0; max-width: 30ch; text-wrap: balance; }
+.tagline em { font-style: normal; color: var(--accent); }
+.hero .lede { max-width: 58ch; font-size: clamp(16px, 1.8vw, 18px); color: var(--band-muted); margin: 20px 0 0; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 7px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font-family: var(--body); }
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn.ghost { background: transparent; color: var(--band-ink); border-color: rgba(255,255,255,.22); }
+.btn.ghost:hover { border-color: var(--band-ink); }
+.collage { position: relative; aspect-ratio: 16 / 12; max-width: 100%; }
+.collage img { position: absolute; width: 78%; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.08); transition: transform .45s ease; }
+.collage img:nth-child(1) { left: 0; top: 3%; transform: rotate(-3deg); }
+.collage img:nth-child(2) { right: 0; top: 25%; transform: rotate(2deg); z-index: 2; }
+.collage img:nth-child(3) { left: 9%; bottom: 0; transform: rotate(-1deg); z-index: 3; }
+.collage:hover img:nth-child(1) { transform: rotate(-5deg) translate(-8px, -6px); }
+.collage:hover img:nth-child(2) { transform: rotate(4deg) translate(8px, 0); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.1); }
+.stat { padding: 20px 18px 28px 0; display: grid; gap: 2px; }
+.stat + .stat { padding-left: 18px; border-left: 1px solid rgba(255,255,255,.1); }
+.stat b { font-family: var(--display); font-variation-settings: "wdth" 112; font-size: clamp(22px, 3vw, 30px); font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--band-muted); line-height: 1.4; }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { padding-left: 0; border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.1); }
+}
+
+/* Sections */
+section { padding-block: clamp(52px, 7vw, 92px); }
+.head { display: grid; gap: 12px; margin-bottom: 30px; }
+.head h2 { font-variation-settings: "wdth" 110; font-weight: 800; font-size: clamp(28px, 3.8vw, 42px); line-height: 1.06; }
+.head p { margin: 0; max-width: 66ch; color: var(--muted); }
+
+/* Practice areas */
+.areas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.area { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; cursor: pointer; font: inherit; color: inherit; display: grid; gap: 10px; align-content: start; transition: transform .18s ease, box-shadow .18s ease; position: relative; overflow: hidden; }
+.area::after { content: ""; position: absolute; inset: auto 0 0 0; height: 3px; background: var(--c); transform: scaleX(.18); transform-origin: left; transition: transform .25s ease; }
+.area:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.area:hover::after, .area[aria-current="true"]::after { transform: scaleX(1); }
+.glyph { width: 42px; height: 42px; border-radius: 9px; background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); display: grid; place-items: center; }
+.area h3 { font-variation-settings: "wdth" 106; font-size: 19px; font-weight: 750; }
+.area p { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.5; }
+.area .count { font-family: var(--mono); font-size: 12.5px; color: var(--c); }
+@media (max-width: 900px) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .areas { grid-template-columns: minmax(0, 1fr); } }
+
+/* Work explorer */
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 5px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; width: fit-content; max-width: 100%; margin-bottom: 18px; }
+.tab { font: 600 14px var(--body); padding: 9px 14px; border-radius: 7px; border: 0; background: transparent; color: var(--muted); cursor: pointer; display: inline-flex; gap: 8px; align-items: center; }
+.tab small { font-family: var(--mono); font-weight: 500; font-size: 12px; opacity: .8; }
+.tab[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.filters { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; margin-bottom: 22px; }
+.fgroup { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.fgroup .label { margin-right: 4px; }
+.chip { font: 13.5px var(--body); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.chip:hover { border-color: var(--c, var(--ink)); }
+.chip[aria-pressed="true"] { background: color-mix(in srgb, var(--c, var(--ink)) 16%, var(--surface)); border-color: var(--c, var(--ink)); font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; text-align: left; padding: 0; font: inherit; color: inherit; transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.thumb { aspect-ratio: 16 / 9; width: 100%; max-width: 100%; background: var(--line); border-bottom: 1px solid var(--line); overflow: hidden; position: relative; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge { position: absolute; top: 10px; left: 10px; font: 600 11.5px var(--body); padding: 4px 9px; border-radius: 5px; background: rgba(10,22,34,.84); color: #FFFFFF; }
+.badge.real { left: auto; right: 10px; background: rgba(23,128,76,.92); }
+.art { aspect-ratio: 16 / 9; width: 100%; max-width: 100%; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; background: linear-gradient(135deg, color-mix(in srgb, var(--c) 20%, var(--surface)), color-mix(in srgb, var(--c) 5%, var(--surface))); display: grid; place-items: center; }
+.art svg { width: 58%; height: auto; color: var(--c); }
+.art .ctx { position: absolute; left: 12px; top: 12px; font: 600 11.5px var(--body); padding: 4px 9px; border-radius: 5px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+.body { padding: 16px 18px 18px; display: grid; gap: 8px; min-width: 0; }
+.kicker { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--c, var(--muted)); }
+.card h3 { font-variation-settings: "wdth" 104; font-size: 18.5px; font-weight: 700; line-height: 1.22; }
+.card p { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.5; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.tag { font-family: var(--mono); font-size: 11.5px; padding: 3px 8px; border-radius: 4px; background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+.empty { grid-column: 1 / -1; padding: 40px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+.note { margin-top: 22px; font-size: 13.5px; color: var(--muted); max-width: 90ch; }
+
+/* Modal */
+.modal { position: fixed; inset: 0; z-index: 60; background: rgba(5,10,15,.84); display: flex; align-items: center; justify-content: center; padding: calc(16px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.panel { background: var(--surface); color: var(--ink); border-radius: 12px; width: min(1200px, 100%); max-height: 100%; overflow: auto; display: grid; grid-template-columns: minmax(0, 1fr) 320px; }
+.panel.text { width: min(720px, 100%); grid-template-columns: minmax(0, 1fr); }
+.panel img { width: 100%; display: block; background: var(--line); }
+.side { padding: 22px; display: grid; gap: 14px; align-content: start; border-left: 1px solid var(--line); min-width: 0; }
+.panel.text .side { border-left: 0; padding: 28px; }
+.side h3 { font-variation-settings: "wdth" 106; font-size: 22px; line-height: 1.15; }
+.side dl { margin: 0; display: grid; gap: 12px; font-size: 14.5px; }
+.side dt { font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.side dd { margin: 3px 0 0; line-height: 1.55; }
+.mnav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+@media (max-width: 880px) { .panel { grid-template-columns: minmax(0, 1fr); } .side { border-left: 0; border-top: 1px solid var(--line); } }
+
+/* Services */
+.services { background: var(--surface); border-block: 1px solid var(--line); }
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.svc { padding: 24px; display: grid; gap: 8px; align-content: start; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.svc h3 { font-variation-settings: "wdth" 104; font-size: 18px; font-weight: 700; display: flex; gap: 10px; align-items: center; }
+.svc h3 span { width: 10px; height: 10px; border-radius: 2px; background: var(--c); flex: none; }
+.svc p { margin: 0; color: var(--muted); font-size: 14.5px; }
+.svc .tags { margin-top: 6px; }
+.process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 40px; counter-reset: step; }
+.step { display: grid; gap: 6px; align-content: start; padding-top: 16px; border-top: 2px solid var(--ink); counter-increment: step; }
+.step::before { content: "Step " counter(step); font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.step h3 { font-variation-settings: "wdth" 104; font-size: 17px; font-weight: 700; }
+.step p { margin: 0; color: var(--muted); font-size: 14.5px; }
+.engage { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; align-items: center; }
+.engage .label { margin-right: 6px; }
+.engage span.e { padding: 7px 14px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); font-size: 14px; }
+@media (max-width: 860px) { .process { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .process { grid-template-columns: minmax(0, 1fr); } }
+
+/* Experience */
+.timeline { border-top: 1px solid var(--line); }
+.job { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 24px; padding-block: 26px; border-bottom: 1px solid var(--line); }
+.job .when { font-family: var(--mono); font-size: 13px; color: var(--muted); display: grid; gap: 6px; align-content: start; }
+.job .when b { font-family: var(--body); font-size: 14px; color: var(--ink); font-weight: 600; }
+.pill { width: fit-content; font: 600 11.5px var(--body); padding: 3px 9px; border-radius: 999px; background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); }
+.job h3 { font-variation-settings: "wdth" 106; font-size: 21px; font-weight: 750; line-height: 1.2; }
+.job .org { color: var(--muted); font-weight: 500; margin: 4px 0 12px; }
+.job ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--muted); max-width: 76ch; }
+.job li::marker { color: var(--accent); }
+@media (max-width: 720px) { .job { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+.reports { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.reports summary { cursor: pointer; padding: 14px 16px; font-weight: 600; font-size: 15px; display: flex; justify-content: space-between; gap: 12px; align-items: center; list-style: none; }
+.reports summary::-webkit-details-marker { display: none; }
+.reports summary::after { content: "Show"; font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.reports[open] summary::after { content: "Hide"; }
+.reports summary small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; }
+.rgroups { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 18px 24px; padding: 4px 16px 18px; }
+.rgroups h4 { margin: 0 0 8px; font: 500 11.5px var(--mono); text-transform: uppercase; letter-spacing: .07em; color: var(--c); }
+.rgroups ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.rgroups li { font-size: 13px; padding: 4px 10px; border-radius: 5px; background: var(--bg); border: 1px solid var(--line); color: var(--ink); }
+.reports .fine { padding: 0 16px 16px; font-size: 13px; color: var(--muted); margin: 0; }
+.creds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 14px; margin-top: 34px; }
+.cred { padding: 18px 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.cred b { display: block; font-size: 16px; margin: 6px 0 2px; line-height: 1.35; }
+.cred span { color: var(--muted); font-size: 14.5px; }
+
+/* Skills */
+.stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 28px 32px; }
+.stack h3 { font-family: var(--mono); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 12px; }
+.stack ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.stack li { font-size: 14px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+
+/* Contact */
+.contact { background: var(--band); color: var(--band-ink); }
+.contact .head h2 { color: var(--band-ink); }
+.contact .head p, .contact .label { color: var(--band-muted); }
+.crow { display: flex; flex-wrap: wrap; gap: 14px; }
+.pill2 { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 9px; border: 1px solid rgba(255,255,255,.16); font-size: 15px; min-width: 0; }
+.pill2 code { font-family: var(--mono); font-size: 14px; user-select: all; overflow-wrap: anywhere; }
+.pill2 button, .pill2 a.go { font: 600 13px var(--body); padding: 6px 12px; border-radius: 6px; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; text-decoration: none; white-space: nowrap; }
+.brief { margin-top: 26px; color: var(--band-muted); font-size: 14.5px; max-width: 70ch; }
+.status { font-size: 13px; min-height: 1.4em; color: var(--accent); margin-top: 12px; }
+footer { background: var(--band); color: var(--band-muted); border-top: 1px solid rgba(255,255,255,.08); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-block: 20px 28px; font-size: 13px; }
+</style>
+
+<style>body{margin:0} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>NH</i>Nishana Hafsath</a>
+    <ul>
+      <li class="opt"><a href="#work">Work</a></li>
+      <li class="opt"><a href="#services">Services</a></li>
+      <li class="opt"><a href="#experience">Experience</a></li>
+      <li><a class="hire" href="#contact">Hire me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="avail">Available for freelance projects and full-time roles</span>
+      <h1>Nishana <span>Hafsath</span></h1>
+      <div class="who"><b>Data Analyst &amp; BI Developer</b><span>Dubai, UAE</span></div>
+      <p class="tagline">I turn business data into <em>dashboards, insights and models</em> teams act on.</p>
+      <p class="lede">From Power BI, Tableau and Looker Studio reporting to Python analytics, machine learning and AI. I work with retail, FMCG, heavy machinery, finance and supply chain data from ERPs, SQL databases, cloud warehouses, SharePoint and spreadsheets.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn ghost" href="#contact">Start a project</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/nishana-hafsath-kt" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <img src="walmart-sales.jpg" alt="">
+      <img src="online-retail-customers.jpg" alt="">
+      <img src="fleet-pdm.jpg" alt="">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b id="stat-dash">25</b><span>dashboards in this portfolio</span></div>
+      <div class="stat" role="listitem"><b>3 BI tools</b><span>Power BI, Tableau, Looker Studio</span></div>
+      <div class="stat" role="listitem"><b id="stat-py">20</b><span>Python analytics, ML and AI projects</span></div>
+      <div class="stat" role="listitem"><b>UAE &middot; USA &middot; AU</b><span>teams and stakeholders I&rsquo;ve delivered for</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">What I do</div>
+      <h2>Four practice areas</h2>
+      <p>Pick an area to jump straight to the related work.</p>
+    </div>
+    <div class="areas" id="area-tiles"></div>
+  </div>
+</section>
+
+<section id="work" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Portfolio</div>
+      <h2>Selected work</h2>
+      <p>Dashboards marked <strong>Real data</strong> are built on public datasets from Kaggle, UCI, NASA and Microsoft. Employer and client projects are described without confidential data.</p>
+    </div>
+    <div class="tabs" role="tablist" id="tabs" aria-label="Practice areas"></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+    <p class="note" id="note"></p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Freelance</div>
+      <h2>How I can help your team</h2>
+      <p>Fixed-scope projects or ongoing support, delivered remotely or on-site in the UAE. I work with the data you already have, whatever system it lives in.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc" style="--c: var(--viz)"><h3><span></span>BI dashboards &amp; reporting</h3><p>Executive and operational dashboards with clean data models, row-level security and scheduled refresh.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Looker Studio</span></div></div>
+      <div class="svc" style="--c: var(--ana)"><h3><span></span>Data analysis &amp; insight</h3><p>Sales, customer, inventory and profitability deep-dives that answer a specific business question, with clear recommendations.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Excel</span></div></div>
+      <div class="svc" style="--c: var(--ana)"><h3><span></span>Data modelling &amp; automation</h3><p>Replace manual Excel reporting with automated pipelines and star-schema models from ERP, SQL, SharePoint and cloud sources.</p><div class="tags"><span class="tag">Power Query</span><span class="tag">Databricks</span><span class="tag">Fabric</span></div></div>
+      <div class="svc" style="--c: var(--ml)"><h3><span></span>Machine learning</h3><p>Forecasting, churn, customer segmentation, anomaly detection and predictive maintenance models, explained in business terms.</p><div class="tags"><span class="tag">scikit-learn</span><span class="tag">Prophet</span><span class="tag">LSTM</span></div></div>
+      <div class="svc" style="--c: var(--ai)"><h3><span></span>AI &amp; NLP prototypes</h3><p>Sentiment and text classification, review mining and computer vision proofs of concept using transformer and CNN models.</p><div class="tags"><span class="tag">BERT</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span></div></div>
+      <div class="svc" style="--c: var(--viz)"><h3><span></span>Training &amp; dashboard audits</h3><p>Review existing reports for speed, accuracy and usability, plus hands-on Power BI training for your team.</p><div class="tags"><span class="tag">DAX Studio</span><span class="tag">Self-service BI</span></div></div>
+    </div>
+    <div class="process">
+      <div class="step"><h3>Discovery call</h3><p>We agree the business question, the audience and how success will be measured.</p></div>
+      <div class="step"><h3>Data audit &amp; model</h3><p>I connect to your sources, check data quality and design the model or analysis approach.</p></div>
+      <div class="step"><h3>Build &amp; iterate</h3><p>You see working drafts early and shape them before anything is final.</p></div>
+      <div class="step"><h3>Handover &amp; support</h3><p>Documentation, a walkthrough for your team and optional ongoing support.</p></div>
+    </div>
+    <div class="engage"><span class="label">Ways to work</span><span class="e">Fixed-scope project</span><span class="e">Monthly retainer</span><span class="e">Dashboard audit</span><span class="e">Full-time role</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Record</div>
+      <h2>Experience &amp; internships</h2>
+    </div>
+    <div class="timeline">
+      <article class="job" style="--c: var(--viz)">
+        <div class="when"><b>Apr 2025 &ndash; Present</b>Dubai, UAE<span class="pill">Full-time</span></div>
+        <div>
+          <h3>Power BI Specialist</h3>
+          <div class="org">Access Hire Middle East LLC &middot; equipment &amp; plant rental, UAE and Australia</div>
+          <ul>
+            <li>Design, build and maintain Power BI reporting across sales, operations, utilisation, stock, transport, finance, HR and safety, including project and asset performance reporting for the Australian and Middle East businesses.</li>
+            <li>Build star-schema models and DAX measures for financial and operational KPIs, transforming high-volume ERP, SQL, Excel and SharePoint data with Power Query and SQL.</li>
+            <li>Work with UAE business stakeholders and an external Australian IT team to gather requirements, deliver solutions and troubleshoot data issues.</li>
+            <li>Manage workspaces, security and access with static and dynamic row-level security, publishing through Power BI Apps across departments and regions.</li>
+            <li>Automated manual reporting with scheduled refreshes, compile monthly KPI analysis for senior leadership, and train colleagues in self-service reporting.</li>
+          </ul>
+          <details class="reports">
+            <summary><span>Reports I built and maintain<small>Published through two Power BI Apps with Copilot enabled. Names only, as the content is confidential.</small></span></summary>
+            <div class="rgroups">
+              <div><h4>Executive &amp; performance</h4><ul><li>Executive Report</li><li>Performance Comparison Dashboard</li><li>Performance Comparison Report</li><li>Monthly Comparison Report</li><li>Segment Performance</li><li>Operational Performance Report</li></ul></div>
+              <div><h4>Finance &amp; credit control</h4><ul><li>Debtors Report</li><li>DSO Report</li><li>Collections Dashboard</li><li>Creditors Report</li><li>Creditors Report, Intercompany</li></ul></div>
+              <div><h4>Sales &amp; customers</h4><ul><li>Sales Performance Dashboard</li><li>Sales Leaderboard</li><li>Sales Order Report</li><li>Sales Reports</li><li>Globe Power Sales Report</li><li>Estimate Report</li><li>Customers</li></ul></div>
+              <div><h4>Fleet &amp; utilisation</h4><ul><li>Fleet Middle East</li><li>Equipment Performance</li><li>Utilisation</li><li>Utilisation Report</li><li>Utilisation (Invoice)</li><li>Asset Availability Report</li><li>Fleet Age</li><li>Out of Service</li><li>What&rsquo;s Out Where</li></ul></div>
+              <div><h4>Stock, purchasing &amp; transport</h4><ul><li>Real-time Stock Availability</li><li>Stock Availability</li><li>Aging Inventory</li><li>Purchase Order Report</li><li>Transport Report</li></ul></div>
+              <div><h4>Safety &amp; people</h4><ul><li>Safety Report</li><li>Hazards</li><li>Safety Activities</li><li>HR Report</li><li>Activity Report</li></ul></div>
+            </div>
+          </details>
+        </div>
+      </article>
+      <article class="job" style="--c: var(--ml)">
+        <div class="when"><b>Apr 2024 &ndash; Mar 2025</b>USA &middot; remote<span class="pill">Full-time</span></div>
+        <div>
+          <h3>Data Analyst</h3>
+          <div class="org">Beamlytics &middot; retail and FMCG analytics</div>
+          <ul>
+            <li>Implemented an automated demand forecasting system for 100+ SKUs in Python (pandas, scikit-learn) and TensorFlow, capturing seasonality and market trends and cutting manual forecasting effort by 30%.</li>
+            <li>Built machine learning models for retail clients: customer churn, sales forecasting, customer classification and lifetime value, fraud detection, price optimisation, recommendations, anomaly detection and inventory optimisation.</li>
+            <li>Designed and deployed ETL pipelines in BigQuery and Databricks, improving data processing efficiency by 40%, and led preprocessing across 50+ datasets (missing values, outliers, scaling, type conversion, de-duplication).</li>
+            <li>Built 15+ interactive dashboards in Looker Studio, Tableau and Power BI covering sales, operations, finance and customer insights.</li>
+          </ul>
+          <details class="reports" style="--c: var(--ml)">
+            <summary><span>Reports and models delivered<small>Client work for retail and FMCG brands. Details are confidential.</small></span></summary>
+            <div class="rgroups">
+              <div><h4>Forecasting</h4><ul><li>Demand Forecasting</li><li>Sales Forecasting</li></ul></div>
+              <div><h4>Customers</h4><ul><li>Customer Churn</li><li>Customer Segmentation</li><li>Customer Lifetime Value</li></ul></div>
+              <div><h4>Sales</h4><ul><li>Sales Analysis</li><li>Price Optimisation</li><li>Product Recommendations</li></ul></div>
+              <div><h4>Inventory</h4><ul><li>Inventory Optimisation</li><li>Stock Level Analysis</li><li>Stock-out Risk</li></ul></div>
+            </div>
+          </details>
+        </div>
+      </article>
+      <article class="job" style="--c: var(--ai)">
+        <div class="when"><b>Jan 2024 &ndash; Apr 2024</b>Trivandrum, India<span class="pill">Internship</span></div>
+        <div>
+          <h3>AI / ML Intern</h3>
+          <div class="org">Digital University Kerala &middot; Kerala State Government precision agriculture initiative</div>
+          <ul>
+            <li>Developed a rice leaf health detection system using computer vision and deep learning (CNN, transfer learning), including EDA on 1,700+ images.</li>
+            <li>Implemented models in Python with TensorFlow, PyTorch, OpenCV and NumPy to detect pest attacks, diseases and nutrient deficiencies, delivering real-time diagnostic predictions.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job" style="--c: var(--ai)">
+        <div class="when"><b>Sep 2023 &ndash; Dec 2023</b>Trivandrum, India<span class="pill">Internship</span></div>
+        <div>
+          <h3>AI / ML Intern</h3>
+          <div class="org">TCS iON</div>
+          <ul>
+            <li>Built and deployed an end-to-end NLP sentiment analysis model using LSTM, BERT and transformers, reaching 94% accuracy on customer review classification.</li>
+            <li>Implemented a text preprocessing workflow with NLTK and spaCy: tokenisation, lemmatisation, POS tagging, named entity recognition and dependency parsing.</li>
+            <li>Presented insights through interactive Plotly and Streamlit dashboards for stakeholders.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="creds">
+      <div class="cred"><span class="label">Education &middot; 2022&ndash;2024</span><b>MSc Data Analytics &amp; Computational Science</b><span>Digital University Kerala</span></div>
+      <div class="cred"><span class="label">Education &middot; 2019&ndash;2022</span><b>BSc Physics</b><span>DGMMES Mampad College, Calicut University</span></div>
+      <div class="cred"><span class="label">Certification</span><b>Certified Specialist in Machine Learning &amp; AI</b><span>ICT Academy of Kerala</span></div>
+      <div class="cred"><span class="label">Certification</span><b>Power BI Job Simulation</b><span>PwC Switzerland &middot; Forage</span></div>
+      <div class="cred"><span class="label">Certification</span><b>Data Analytics &amp; Visualization Job Simulation</b><span>Accenture North America &middot; Forage</span></div>
+      <div class="cred"><span class="label">Certification</span><b>Associate Cloud Engineer Track</b><span>Google Cloud</span></div>
+      <div class="cred"><span class="label">Certification</span><b>Career Essentials in Generative AI</b><span>Microsoft &amp; LinkedIn</span></div>
+      <div class="cred"><span class="label">Certification</span><b>Fundamentals of Digital Marketing</b><span>Google</span></div>
+      <div class="cred"><span class="label">Languages</span><b>English, Malayalam, Hindi</b><span>Fluent &middot; native &middot; fluent</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Toolkit</div>
+      <h2>Tools I work with</h2>
+    </div>
+    <div class="stack">
+      <div><h3>BI &amp; visualisation</h3><ul><li>Power BI</li><li>DAX</li><li>Power Query (M)</li><li>Tableau</li><li>Looker Studio</li><li>Excel</li><li>Google Sheets</li></ul></div>
+      <div><h3>Data &amp; engineering</h3><ul><li>SQL</li><li>SQL Server</li><li>MySQL</li><li>PostgreSQL</li><li>BigQuery</li><li>Databricks</li><li>Microsoft Fabric</li><li>Google Cloud Platform</li><li>ERP data</li><li>SharePoint</li></ul></div>
+      <div><h3>Python, ML &amp; AI</h3><ul><li>Pandas</li><li>NumPy</li><li>scikit-learn</li><li>ARIMA &amp; Prophet</li><li>LSTM</li><li>TensorFlow</li><li>PyTorch</li><li>OpenCV</li><li>YOLOv8</li><li>Transformers &amp; BERT</li><li>NLTK &amp; spaCy</li><li>Streamlit</li><li>R</li></ul></div>
+      <div><h3>Cloud &amp; practice</h3><ul><li>Azure</li><li>AWS</li><li>Google Cloud</li><li>Star schema modelling</li><li>Row-level security</li><li>Requirements gathering</li><li>Data governance</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Contact</div>
+      <h2>Have a project or a role in mind?</h2>
+      <p>I take on freelance dashboard, analytics and machine learning projects, and I&rsquo;m open to full-time roles in Dubai and Abu Dhabi.</p>
+    </div>
+    <div class="crow">
+      <div class="pill2"><span>Email</span><code id="email">nishanahafsath59@gmail.com</code><button type="button" id="copy-email">Copy</button></div>
+      <div class="pill2"><span>LinkedIn</span><code>linkedin.com/in/nishana-hafsath-kt</code><a class="go" href="https://www.linkedin.com/in/nishana-hafsath-kt" target="_blank" rel="noopener">Open &#8599;</a></div>
+    </div>
+    <div class="status" id="copy-status" aria-live="polite"></div>
+    <p class="brief">For a project, a short note on your business question, where the data lives (ERP, SQL, Excel or cloud) and your timeline is all I need to send a proposal.</p>
+  </div>
+</section>
+<footer><div class="wrap"><span>&copy; 2026 Nishana Hafsath &middot; Dubai, UAE</span><span>Real-data dashboards use public datasets. Synthetic dashboards use generated data. No client data is shown.</span></div></footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="panel" id="panel">
+    <img id="m-img" alt="">
+    <div class="side">
+      <div class="kicker" id="m-kicker"></div>
+      <h3 id="m-title"></h3>
+      <dl id="m-dl"></dl>
+      <div class="mnav">
+        <button class="btn" type="button" id="m-prev">&larr; Previous</button>
+        <button class="btn" type="button" id="m-next">Next &rarr;</button>
+        <button class="btn" type="button" id="m-close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const ICON = {
+  viz: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+  analytics: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8 13l2-3 2 2 2-4"/></svg>',
+  ml: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 4M7 17l3-4M14 11l3-4M14 13l3 4"/></svg>',
+  ai: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z"/></svg>'
+};
+const ART = {
+  analytics: '<svg viewBox="0 0 200 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M10 98h180" opacity=".35"/><path d="M20 98V86M45 98V72M70 98V80M95 98V62M120 98V52M145 98V60M170 98V38" opacity=".35" stroke-width="9"/><path d="M15 80 50 60 80 70 115 35 150 45 185 15"/><circle cx="115" cy="35" r="6" fill="currentColor"/></svg>',
+  ml: '<svg viewBox="0 0 200 110" fill="none" stroke="currentColor" stroke-width="2.5"><g opacity=".45"><path d="M40 20 100 35M40 55 100 35M40 90 100 75M40 55 100 75M40 20 100 75M40 90 100 35M100 35 160 55M100 75 160 55"/></g><circle cx="40" cy="20" r="9" fill="currentColor"/><circle cx="40" cy="55" r="9" fill="currentColor"/><circle cx="40" cy="90" r="9" fill="currentColor"/><circle cx="100" cy="35" r="10" fill="none"/><circle cx="100" cy="75" r="10" fill="none"/><circle cx="160" cy="55" r="12" fill="currentColor"/></svg>',
+  ai: '<svg viewBox="0 0 200 110" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="20" y="15" width="70" height="80" rx="8"/><path d="M32 35h46M32 50h36M32 65h42M32 80h26" opacity=".5"/><path d="M100 55h20"/><path d="M115 48l8 7-8 7"/><rect x="132" y="25" width="50" height="60" rx="25"/><path d="M146 52c4 6 18 6 22 0"/><circle cx="148" cy="42" r="3" fill="currentColor"/><circle cx="166" cy="42" r="3" fill="currentColor"/></svg>'
+};
+
+const AREAS = [
+  { id: "viz", name: "Data Visualisation", c: "var(--viz)", blurb: "Interactive dashboards in Power BI, Tableau and Looker Studio for retail, FMCG, heavy machinery, finance and supply chain." },
+  { id: "analytics", name: "Data Analytics", c: "var(--ana)", blurb: "Customer, sales, basket and operational analysis that answers a specific business question." },
+  { id: "ml", name: "Machine Learning", c: "var(--ml)", blurb: "Forecasting, churn, segmentation, fraud and anomaly models built in Python for retail clients." },
+  { id: "ai", name: "AI & NLP", c: "var(--ai)", blurb: "Transformer-based NLP and deep-learning computer vision from internships and academic research." }
+];
+
+const DASH = [
+  { img: "walmart-sales", tool: "Power BI", ind: "Retail & FMCG", real: true, title: "Walmart Store Sales Performance",
+    q: "Which stores, store formats and departments drive sales, and how much do holiday weeks lift revenue?",
+    shows: "Weekly sales with holiday weeks marked, format mix, top departments, store size vs productivity, and month-by-month comparison across years.",
+    tech: ["Holiday uplift", "Department Pareto", "Size vs sales scatter", "YoY by month"], data: "Walmart Recruiting: Store Sales Forecasting (Kaggle). 421K weekly store-department rows, 45 stores." },
+  { img: "supermarket-fmcg", tool: "Tableau", ind: "Retail & FMCG", real: true, title: "Supermarket Sales: FMCG Performance",
+    q: "Which product lines and cities drive FMCG sales, when are the peak trading hours, and do loyalty members spend more?",
+    shows: "Sales by product line and city, weekday by hour heat table, payment mix, member vs normal basket value and rating distribution.",
+    tech: ["Heat table", "Grouped bars", "Box plots", "Member analysis"], data: "Supermarket Sales (Kaggle). 1,000 transactions across 3 branches, Jan to Mar 2019." },
+  { img: "grocery-basket", tool: "Looker Studio", ind: "Retail & FMCG", real: true, title: "Grocery Market Basket Analysis",
+    q: "Which grocery items sell together, and which cross-sell and shelf-placement opportunities would lift basket size?",
+    shows: "Item penetration, lift matrix for the top items, basket size distribution and the strongest association rules.",
+    tech: ["Support, confidence, lift", "Lift matrix", "Rules table", "Scorecards"], data: "Groceries dataset (Hahsler et al., arules). 9,835 point-of-sale baskets." },
+  { img: "online-retail-customers", tool: "Tableau", ind: "Retail & FMCG", real: true, title: "Online Retail: Customer Analytics",
+    q: "Who are the most valuable customers, how well is each monthly cohort retained, and where outside the UK is demand growing?",
+    shows: "Monthly revenue and active customers, cohort retention matrix, RFM segments with revenue share, revenue by country and top products.",
+    tech: ["RFM segmentation", "Cohort retention", "Dual-axis trend", "LOD-style aggregation"], data: "UCI Online Retail dataset. 541,909 invoice lines, Dec 2010 to Dec 2011." },
+  { img: "online-retail-ops", tool: "Looker Studio", ind: "Retail & FMCG", real: true, title: "Online Retail: Sales Operations",
+    q: "When do customers buy, which SKUs carry the business, and how much revenue is lost to cancellations each month?",
+    shows: "Weekly revenue, weekday by hour heat table, top SKUs, cancelled value by month and average order value by country.",
+    tech: ["Sparkline scorecards", "Heat table", "SKU data bars", "Cancellation tracking"], data: "UCI Online Retail dataset. 4,070 SKUs, 38 countries." },
+  { img: "superstore-profit", tool: "Power BI", ind: "Retail & FMCG", real: true, title: "Superstore Profitability",
+    q: "Which products and discount levels destroy margin, and where is profitable growth coming from?",
+    shows: "Monthly sales and profit, profit by sub-category, margin by discount band, region performance and a segment by category margin matrix.",
+    tech: ["Diverging bars", "Discount banding", "Margin matrix", "DAX margin measures"], data: "Superstore Sales sample dataset. 8,399 order lines, 2009 to 2012." },
+  { img: "fleet-pdm", tool: "Power BI", ind: "Heavy machinery", real: true, title: "Machine Fleet Predictive Maintenance",
+    q: "Which machines and components fail most, and which sensor signals give early warning before a breakdown?",
+    shows: "Failures by month and component, failures per machine by model, age vs failures, error codes and telemetry in the 24 hours before failure.",
+    tech: ["Pre-failure telemetry", "MTBF", "Normalised heatmap", "Sparkline KPIs"], data: "Microsoft Azure Predictive Maintenance dataset. 100 machines, 876K hourly telemetry readings, 2015." },
+  { img: "ai4i-failures", tool: "Looker Studio", ind: "Heavy machinery", real: true, title: "Machine Failure Analysis: Milling",
+    q: "Under which operating conditions do milling machines fail, and which thresholds should trigger a maintenance alert?",
+    shows: "Failures by mode, failure rate by product quality, torque vs speed, and failure rates by tool wear, temperature gap and power.",
+    tech: ["Feature engineering", "Binned failure rates", "Failure modes"], data: "AI4I 2020 Predictive Maintenance dataset (UCI). 10,000 operations." },
+  { img: "turbofan-rul", tool: "Tableau", ind: "Heavy machinery", real: true, title: "Turbofan Engine Degradation",
+    q: "How do engine sensors drift before failure, and at what cycle should maintenance be scheduled to avoid unplanned downtime?",
+    shows: "Engine life distribution, sensor drift against remaining useful life, sensor correlations, RUL-banded scatter and a survival curve.",
+    tech: ["Remaining useful life", "Degradation curves", "Survival curve"], data: "NASA C-MAPSS turbofan run-to-failure data (FD001). 100 engines, 21 sensors." },
+  { img: "og-rental", tool: "Power BI", ind: "Heavy machinery", real: false, title: "Oil & Gas Equipment Rental & Utilisation",
+    q: "How much of the oilfield fleet is earning, which fields and clients drive revenue, and which contracts need renewal now?",
+    shows: "Fleet status by equipment type, utilisation gauge, revenue by field, contract expiry timeline and top clients.",
+    tech: ["100% stacked bars", "Gauge vs target", "Expiry timeline"], data: "Synthetic oilfield rental data modelled on plant-hire operations." },
+  { img: "og-inspection", tool: "Power BI", ind: "Heavy machinery", real: false, title: "Oil & Gas Inspection & Maintenance",
+    q: "Is every pressure-rated and lifting asset certified to work, what is due next, and which failure modes cost the most downtime?",
+    shows: "Certification status, inspections due by week, preventive vs corrective work orders and downtime Pareto.",
+    tech: ["Due-date buckets", "Heatmap", "Pareto"], data: "Synthetic inspection register and work orders." },
+  { img: "equipment-rental", tool: "Power BI", ind: "Heavy machinery", real: false, title: "Equipment Rental Fleet Utilisation",
+    q: "Which equipment categories and branches are under-utilised, and where should fleet be re-allocated or disposed of?",
+    shows: "Revenue and utilisation trend, utilisation by category, branch mix, top customers and asset age vs utilisation.",
+    tech: ["Dual-axis combo", "Target lines", "Data bars"], data: "Synthetic rental fleet data." },
+  { img: "cash-flow", tool: "Power BI", ind: "Finance", real: false, title: "Cash Flow & Working Capital",
+    q: "Is there enough cash for the next quarter, what is consuming it, and how fast is working capital turning into cash?",
+    shows: "13-week cash forecast with confidence band, cash bridge, DSO, DIO and DPO trends and cash conversion cycle.",
+    tech: ["Forecast band", "Waterfall", "Small multiples", "Gauge"], data: "Synthetic treasury data on an ERP-style chart of accounts." },
+  { img: "management-accounts", tool: "Power BI", ind: "Finance", real: false, title: "Management Accounts",
+    q: "Did we beat budget this month, which cost centres caused the variance, and are budgets burning faster than the year?",
+    shows: "Income statement actual vs budget, cost-centre variance, margin trends, opex treemap and budget burn.",
+    tech: ["Calculation groups", "Variance logic", "Treemap"], data: "Synthetic monthly management pack." },
+  { img: "finance-pl", tool: "Power BI", ind: "Finance", real: false, title: "P&L and Budget vs Actual",
+    q: "Are we tracking to budget, where is margin leaking, and which segments hold the most overdue cash?",
+    shows: "Actual vs budget vs prior year, P&L waterfall, receivables ageing and a region by quarter matrix.",
+    tech: ["Waterfall", "Time intelligence", "AR ageing"], data: "Synthetic financial data." },
+  { img: "inventory", tool: "Power BI", ind: "Supply chain & transport", real: false, title: "Stock & Inventory Management",
+    q: "Is stock moving or piling up, how much capital is ageing or dead, and which critical parts will run out first?",
+    shows: "Receipts vs issues, ageing by warehouse, reorder alerts, dead stock and cycle count accuracy.",
+    tech: ["Ageing buckets", "Reorder point", "Treemap"], data: "Synthetic spare-parts inventory." },
+  { img: "procurement", tool: "Power BI", ind: "Supply chain & transport", real: false, title: "Procurement & Supplier Performance",
+    q: "Are we buying at the right price from the right suppliers, and which suppliers threaten service levels?",
+    shows: "PO spend and savings, supplier scorecard, OTIF vs quality quadrant and purchase price variance.",
+    tech: ["Scorecard", "Quadrant scatter", "PPV"], data: "Synthetic purchase orders." },
+  { img: "supply-chain-otif", tool: "Power BI", ind: "Supply chain & transport", real: false, title: "Inventory & OTIF",
+    q: "Are we delivering on time and in full, and which suppliers create lead-time risk?",
+    shows: "OTIF vs target, inventory by ABC class, ABC Pareto, lead-time box plots and days of cover.",
+    tech: ["ABC analysis", "Box plot", "Policy bands"], data: "Synthetic supply chain data." },
+  { img: "fleet", tool: "Power BI", ind: "Supply chain & transport", real: false, title: "Transport Fleet Management",
+    q: "What does each kilometre cost by vehicle type, and which depots drive unsafely or idle too long?",
+    shows: "Distance and fuel efficiency, cost per km breakdown, telematics heatmap and idle time vs target.",
+    tech: ["Cost breakdown", "Heatmap", "Bullet charts"], data: "Synthetic telematics and fuel data." },
+  { img: "last-mile", tool: "Power BI", ind: "Supply chain & transport", real: false, title: "Last-mile Delivery",
+    q: "Are deliveries on time across every emirate, and why do first attempts fail?",
+    shows: "Weekly on-time %, emirate performance, driver scorecard and failure reasons.",
+    tech: ["Target lines", "Scorecard", "Pareto"], data: "Synthetic delivery data." },
+  { img: "ecommerce", tool: "Power BI", ind: "Retail & FMCG", real: false, title: "E-commerce Online Store",
+    q: "Is revenue growing sustainably, and how well do we retain and convert customers?",
+    shows: "Daily revenue with moving average, category treemap, cohort retention and conversion funnel.",
+    tech: ["Moving average", "Cohort matrix", "Treemap"], data: "Synthetic web store data." },
+  { img: "sales-performance", tool: "Power BI", ind: "Sales & other", real: false, title: "Sales Performance & Pipeline",
+    q: "Are we on track to hit target, where do deals drop out, and which reps convert best?",
+    shows: "Funnel, bookings vs target, rep leaderboard, pipeline by industry and loss reasons.",
+    tech: ["Funnel", "RANKX", "Weighted pipeline"], data: "Synthetic CRM data." },
+  { img: "real-estate", tool: "Power BI", ind: "Sales & other", real: false, title: "Dubai Real Estate Market Pulse",
+    q: "How is the Dubai market trending by volume and price, and which communities drive demand?",
+    shows: "Off-plan vs ready transactions, price per sq ft by community and property mix.",
+    tech: ["Stacked combo", "Scatter", "Price per sq ft"], data: "Synthetic, structured like Dubai Land Department open data." },
+  { img: "hse-safety", tool: "Power BI", ind: "Sales & other", real: false, title: "HSE Safety Performance",
+    q: "Are we getting safer, and which hazards and sites need intervention first?",
+    shows: "Incidents with TRIFR trend, cause Pareto, site heatmap and leading indicators.",
+    tech: ["LTIFR / TRIFR", "Pareto", "Heatmap"], data: "Synthetic incident register." },
+  { img: "hr-analytics", tool: "Power BI", ind: "Sales & other", real: false, title: "HR Workforce Overview",
+    q: "Where is attrition concentrated and what does the workforce profile look like?",
+    shows: "Headcount movement, attrition by department, nationality mix, age pyramid and tenure.",
+    tech: ["Rolling attrition", "Population pyramid", "Dynamic RLS"], data: "Synthetic HR data." }
+];
+
+const PROJ = [
+  { area: "analytics", ctx: "Access Hire", title: "Monthly KPI analysis for senior leadership", tags: ["SQL", "Power BI", "Excel"],
+    problem: "Leadership needed one consolidated monthly view of KPI performance across departments in the UAE and Australia.",
+    approach: "Integrated ERP, Excel and Power BI data into a monthly analysis pack summarising KPI performance, trends and exceptions.",
+    outcome: "A recurring leadership report that replaced manual, spreadsheet-based summaries." },
+  { area: "analytics", ctx: "Beamlytics", title: "Retail business analytics reporting", tags: ["Python", "SQL", "Excel"],
+    problem: "Retail clients needed regular insight into sales, operations, finance and customer behaviour.",
+    approach: "Built analysis in SQL and Python and reported to cross-functional teams, monitoring performance trends and service efficiency metrics.",
+    outcome: "Findings used by client teams for strategic and operational decisions." },
+  { area: "analytics", ctx: "Beamlytics", title: "ETL pipelines and data preprocessing", tags: ["Python", "BigQuery", "Databricks", "SQL"],
+    problem: "Large retail datasets arrived from several sources with inconsistent formats and quality issues.",
+    approach: "Designed ETL pipelines in BigQuery and Databricks and led preprocessing across 50+ datasets: missing values, outliers, scaling, type conversion and de-duplication.",
+    outcome: "40% faster data processing and clean, standardised inputs for reporting and modelling." },
+  { area: "analytics", ctx: "Portfolio", title: "RFM and cohort analysis: online retail", tags: ["Python", "Pandas", "Tableau"], img: "online-retail-customers",
+    problem: "Identify the most valuable customers and how well each monthly cohort is retained.",
+    approach: "Cleaned 541K invoice lines, scored customers on recency, frequency and monetary value with quintiles, and built a cohort retention matrix.",
+    outcome: "Champions are about a quarter of customers but generate around two-thirds of revenue; 66% of customers placed more than one order." },
+  { area: "analytics", ctx: "Portfolio", title: "Market basket analysis: grocery POS data", tags: ["Python", "Association rules", "Looker Studio"], img: "grocery-basket",
+    problem: "Find products that sell together to support cross-selling and shelf placement.",
+    approach: "Computed support, confidence and lift for every item pair across 9,835 baskets and ranked the association rules.",
+    outcome: "Strongest rule: beef buyers are about 3x more likely than average to also buy root vegetables." },
+  { area: "analytics", ctx: "Portfolio", title: "Pre-failure telemetry analysis: machine fleet", tags: ["Python", "Pandas", "Power BI"], img: "fleet-pdm",
+    problem: "Find which sensor signals change before each type of component failure.",
+    approach: "Compared voltage, rotation, pressure and vibration in the 24 hours before 761 failures against the fleet average.",
+    outcome: "Each component shows a distinct signature: pressure and vibration rise about 25% before component 3 and 4 failures." },
+  { area: "analytics", ctx: "Portfolio", title: "Discount and margin analysis: superstore", tags: ["Python", "Pandas", "Power BI"], img: "superstore-profit",
+    problem: "Understand how discounting and product mix affect profitability.",
+    approach: "Banded discounts and compared margin by sub-category, region and customer segment.",
+    outcome: "Furniture runs at 1 to 4% margin against 12 to 16% for office supplies and technology; tables and bookcases lose money." },
+  { area: "analytics", ctx: "Academic", title: "Twitter diplomacy and social network analysis", tags: ["Python", "NLP", "Network analysis"],
+    problem: "Examine the digital diplomacy strategies of U.S. Presidents on Twitter.",
+    approach: "Ran network analysis and sentiment modelling on 30,000+ presidential tweets and visualised key patterns and sentiment trends.",
+    outcome: "Insights on the effectiveness of political communication across the network." },
+  { area: "analytics", ctx: "Beamlytics", title: "Sales analysis for retail clients", tags: ["Python", "SQL", "Looker Studio"],
+    problem: "Retail and FMCG clients needed to understand what was driving sales by product, store and period.",
+    approach: "Analysed sales performance in SQL and Python and reported trends, mix and exceptions in interactive dashboards.",
+    outcome: "Regular sales insight for commercial decisions. Client details are confidential." },
+  { area: "analytics", ctx: "Beamlytics", title: "Inventory and stock-level analysis", tags: ["Python", "SQL"],
+    problem: "Clients carried too much of some products and ran out of others.",
+    approach: "Analysed stock levels, sell-through and stock-out risk alongside demand forecasts.",
+    outcome: "Inputs for replenishment and inventory optimisation. Client details are confidential." },
+  { area: "analytics", ctx: "Beamlytics", title: "BI dashboards for retail clients", tags: ["Looker Studio", "Tableau", "Power BI"],
+    problem: "Stakeholders needed self-service views of sales, operations, finance and customer KPIs.",
+    approach: "Built 15+ interactive dashboards across Google Looker Studio, Tableau and Power BI.",
+    outcome: "Dashboards that increased data-driven decision making by 25%." },
+  { area: "ml", ctx: "Beamlytics", title: "Customer churn prediction", tags: ["Python", "scikit-learn", "Classification"],
+    problem: "Retail clients wanted to know which customers were likely to stop buying.",
+    approach: "Built supervised classification models on customer transaction and behaviour data.",
+    outcome: "Churn risk scores used to target retention activity." },
+  { area: "ml", ctx: "Beamlytics", title: "Customer lifetime value prediction", tags: ["Python", "Regression"],
+    problem: "Marketing needed to know which customers were worth investing in.",
+    approach: "Modelled expected customer value from purchase history to rank and segment customers.",
+    outcome: "Value-based customer prioritisation for campaigns." },
+  { area: "ml", ctx: "Beamlytics", title: "Customer segmentation and classification", tags: ["Python", "Clustering", "Classification"],
+    problem: "Group customers with similar behaviour for tailored offers.",
+    approach: "Applied unsupervised clustering and supervised classification to customer data.",
+    outcome: "Actionable customer segments for retail decision-making." },
+  { area: "ml", ctx: "Beamlytics", title: "Demand forecasting", tags: ["Python", "TensorFlow", "scikit-learn", "Prophet"],
+    problem: "Forecast product demand for 100+ SKUs to plan stock.",
+    approach: "Built an automated forecasting system in Python (pandas, scikit-learn) and TensorFlow, capturing seasonality and market trends; compared ARIMA, Prophet and LSTM models.",
+    outcome: "Manual forecasting effort reduced by 30%." },
+  { area: "ml", ctx: "Beamlytics", title: "Sales forecasting", tags: ["Python", "Time series"],
+    problem: "Give retail clients a forward view of sales to plan targets and budgets.",
+    approach: "Built time-series models on historical sales with seasonality and trend components.",
+    outcome: "Sales forecasts used in commercial planning. Client details are confidential." },
+  { area: "ml", ctx: "Beamlytics", title: "Fraud detection", tags: ["Python", "Classification"],
+    problem: "Flag suspicious transactions for review.",
+    approach: "Built supervised models on transaction features to detect likely fraud.",
+    outcome: "Risk-scored transactions for investigation." },
+  { area: "ml", ctx: "Beamlytics", title: "Price optimisation", tags: ["Python", "Pricing"],
+    problem: "Set prices that balance volume and margin.",
+    approach: "Modelled the relationship between price, demand and margin for retail products.",
+    outcome: "Data-driven pricing recommendations." },
+  { area: "ml", ctx: "Beamlytics", title: "Product recommendation system", tags: ["Python", "Recommenders"],
+    problem: "Suggest relevant products to customers.",
+    approach: "Built recommendation models from customer purchase patterns.",
+    outcome: "Personalised product suggestions for cross-selling." },
+  { area: "ml", ctx: "Beamlytics", title: "Anomaly detection", tags: ["Python", "Unsupervised"],
+    problem: "Spot unusual patterns in sales and operational data early.",
+    approach: "Applied anomaly detection models to monitoring data.",
+    outcome: "Early alerts on outliers for operations teams." },
+  { area: "ml", ctx: "Beamlytics", title: "Inventory optimisation", tags: ["Python", "Forecasting"],
+    problem: "Reduce stock-outs and excess stock.",
+    approach: "Combined demand forecasts with inventory models to recommend stock levels.",
+    outcome: "Better-balanced inventory across products." },
+  { area: "ai", ctx: "Internship", title: "Rice leaf health detection", tags: ["Python", "CNN", "TensorFlow", "AlexNet", "OpenCV"],
+    problem: "Kerala State Government precision agriculture initiative: detect nutrient deficiencies, diseases and pest infestation from leaf images.",
+    approach: "Ran EDA on 1,700+ images to improve dataset quality, then built and fine-tuned a CNN (AlexNet architecture) in TensorFlow.",
+    outcome: "82% classification accuracy, with real-time diagnostic predictions." },
+  { area: "ai", ctx: "Academic", title: "Brain tumor detection", tags: ["Python", "YOLOv8", "Computer vision"],
+    problem: "Detect and segment brain tumours in medical images.",
+    approach: "Built an image segmentation system with YOLOv8, improved with data augmentation and hyperparameter tuning.",
+    outcome: "High tumour detection accuracy and more reliable predictions for medical imaging." },
+  { area: "ai", ctx: "Internship", title: "Customer review sentiment analysis", tags: ["Python", "BERT", "LSTM", "spaCy", "Streamlit"],
+    problem: "Classify customer reviews by sentiment for TCS iON.",
+    approach: "Built an end-to-end NLP pipeline: NLTK and spaCy preprocessing (tokenisation, lemmatisation, POS, NER, dependency parsing), then LSTM, BERT and transformer models.",
+    outcome: "94% accuracy, deployed with Plotly and Streamlit dashboards for stakeholders." },
+  { area: "ai", ctx: "Academic", title: "Sentiment analysis on Swiggy reviews", tags: ["Python", "BERT", "NLP"],
+    problem: "Uncover customer satisfaction trends from food delivery reviews.",
+    approach: "Analysed more than 20,000 customer reviews with a BERT-based NLP model.",
+    outcome: "90% accuracy, with insights supporting targeted marketing and product improvements." },
+  { area: "ai", ctx: "Beamlytics", title: "Sentiment analysis for retail feedback", tags: ["Python", "NLP"],
+    problem: "Turn unstructured retail customer feedback into measurable insight.",
+    approach: "Applied NLP sentiment models as part of the advanced analytics work for retail clients.",
+    outcome: "Sentiment signals combined with sales and customer analytics." }
+];
+
+const IND = ["Retail & FMCG", "Heavy machinery", "Finance", "Supply chain & transport", "Sales & other"];
+const TOOLS = ["Power BI", "Tableau", "Looker Studio"];
+const state = { area: "viz", tool: "All", ind: "All", ctx: "All" };
+let visible = [];
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+const countOf = a => a === "viz" ? DASH.length : PROJ.filter(p => p.area === a).length;
+
+$("stat-dash").textContent = DASH.length;
+$("stat-py").textContent = PROJ.filter(p => p.tags.includes("Python")).length;
+
+$("area-tiles").innerHTML = AREAS.map(a => `
+  <button type="button" class="area" style="--c:${a.c}" data-a="${a.id}">
+    <span class="glyph">${ICON[a.id]}</span>
+    <h3>${esc(a.name)}</h3>
+    <p>${esc(a.blurb)}</p>
+    <span class="count">${countOf(a.id)} ${a.id === "viz" ? "dashboards" : "projects"} &rarr;</span>
+  </button>`).join("");
+$("area-tiles").addEventListener("click", e => {
+  const b = e.target.closest(".area"); if (!b) return;
+  setArea(b.dataset.a);
+  $("work").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+
+function renderTabs() {
+  $("tabs").innerHTML = AREAS.map(a => `<button type="button" role="tab" class="tab" aria-selected="${a.id === state.area}" data-a="${a.id}">${esc(a.name)} <small>${countOf(a.id)}</small></button>`).join("");
+  document.querySelectorAll(".area").forEach(t => t.setAttribute("aria-current", t.dataset.a === state.area));
+}
+$("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) setArea(b.dataset.a); });
+
+function chipGroup(label, key, opts, color) {
+  return `<div class="fgroup"><span class="label">${label}</span>${["All", ...opts].map(o =>
+    `<button type="button" class="chip" style="--c:${color}" data-k="${key}" data-v="${esc(o)}" aria-pressed="${state[key] === o}">${esc(o)}</button>`).join("")}</div>`;
+}
+function renderFilters() {
+  const a = AREAS.find(x => x.id === state.area);
+  if (state.area === "viz") {
+    $("filters").innerHTML = chipGroup("Tool", "tool", TOOLS, a.c) + chipGroup("Industry", "ind", IND, a.c);
+    $("note").textContent = "Real-data dashboards use public datasets (Kaggle, UCI, NASA, Microsoft). Synthetic dashboards use generated data modelled on industries I work in, so no client data is shown.";
+  } else {
+    const ctxs = [...new Set(PROJ.filter(p => p.area === state.area).map(p => p.ctx))];
+    $("filters").innerHTML = chipGroup("Context", "ctx", ctxs, a.c);
+    $("note").textContent = "Employer and client projects are described at a high level, without confidential data or results.";
+  }
+}
+$("filters").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  state[b.dataset.k] = b.dataset.v;
+  renderFilters(); renderGrid();
+});
+
+function renderGrid() {
+  const a = AREAS.find(x => x.id === state.area);
+  if (state.area === "viz") {
+    visible = DASH.map((d, i) => i).filter(i => (state.tool === "All" || DASH[i].tool === state.tool) && (state.ind === "All" || DASH[i].ind === state.ind));
+    $("grid").innerHTML = visible.length ? visible.map(i => {
+      const d = DASH[i];
+      return `<button type="button" class="card" style="--c:${a.c}" data-i="${i}" aria-label="Open ${esc(d.title)}">
+        <div class="thumb"><img src="${d.img}.jpg" alt="${esc(d.title)} dashboard" loading="lazy" width="1600" height="900"><span class="badge">${esc(d.tool)}</span>${d.real ? '<span class="badge real">Real data</span>' : ""}</div>
+        <div class="body"><div class="kicker">${esc(d.ind)}</div><h3>${esc(d.title)}</h3><p>${esc(d.q)}</p>
+        <div class="tags">${d.tech.slice(0, 3).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div></div></button>`;
+    }).join("") : `<div class="empty">No dashboards match these filters yet.</div>`;
+  } else {
+    visible = PROJ.map((p, i) => i).filter(i => PROJ[i].area === state.area && (state.ctx === "All" || PROJ[i].ctx === state.ctx));
+    $("grid").innerHTML = visible.map(i => {
+      const p = PROJ[i];
+      const vis = p.img
+        ? `<div class="thumb"><img src="${p.img}.jpg" alt="" loading="lazy" width="1600" height="900"><span class="badge">${esc(p.ctx)}</span></div>`
+        : `<div class="art"><span class="ctx">${esc(p.ctx)}</span>${ART[p.area]}</div>`;
+      return `<button type="button" class="card" style="--c:${a.c}" data-i="${i}" aria-label="Open ${esc(p.title)}">${vis}
+        <div class="body"><div class="kicker">${esc(a.name)}</div><h3>${esc(p.title)}</h3><p>${esc(p.problem)}</p>
+        <div class="tags">${p.tags.slice(0, 4).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div></div></button>`;
+    }).join("");
+  }
+}
+
+function setArea(id) {
+  state.area = id; state.tool = "All"; state.ind = "All"; state.ctx = "All";
+  try { localStorage.setItem("pf-area", id); } catch (_) {}
+  renderTabs(); renderFilters(); renderGrid();
+}
+
+const modal = $("modal"); let cur = 0, lastFocus = null;
+function openItem(i) {
+  cur = i;
+  const a = AREAS.find(x => x.id === state.area);
+  const panel = $("panel"), img = $("m-img");
+  let rows;
+  if (state.area === "viz") {
+    const d = DASH[i];
+    panel.classList.remove("text"); img.hidden = false;
+    img.src = `${d.img}.jpg`; img.alt = `${d.title} dashboard`;
+    $("m-kicker").textContent = `${d.tool} · ${d.ind}`;
+    $("m-title").textContent = d.title;
+    rows = [["Business question", d.q], ["What it shows", d.shows], ["Techniques", d.tech.join(" · ")], [d.real ? "Data (real, public)" : "Data", d.data]];
+  } else {
+    const p = PROJ[i];
+    if (p.img) { panel.classList.remove("text"); img.hidden = false; img.src = `${p.img}.jpg`; img.alt = ""; }
+    else { panel.classList.add("text"); img.hidden = true; img.removeAttribute("src"); }
+    $("m-kicker").textContent = `${a.name} · ${p.ctx}`;
+    $("m-title").textContent = p.title;
+    rows = [["Problem", p.problem], ["Approach", p.approach], ["Outcome", p.outcome], ["Stack", p.tags.join(" · ")]];
+  }
+  $("m-dl").innerHTML = rows.map(([t, v]) => `<div><dt>${esc(t)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  $("m-kicker").style.color = a.c;
+  if (modal.hidden) { lastFocus = document.activeElement; modal.hidden = false; document.body.style.overflow = "hidden"; }
+  $("m-close").focus();
+}
+function closeModal() { modal.hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+function step(d) { const pos = visible.indexOf(cur); openItem(visible[(pos + d + visible.length) % visible.length]); }
+$("grid").addEventListener("click", e => { const c = e.target.closest(".card"); if (c) openItem(+c.dataset.i); });
+$("m-close").addEventListener("click", closeModal);
+$("m-prev").addEventListener("click", () => step(-1));
+$("m-next").addEventListener("click", () => step(1));
+modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+document.addEventListener("keydown", e => {
+  if (modal.hidden) return;
+  if (e.key === "Escape") closeModal();
+  if (e.key === "ArrowRight") step(1);
+  if (e.key === "ArrowLeft") step(-1);
+});
+
+$("copy-email").addEventListener("click", () => {
+  const status = $("copy-status");
+  navigator.clipboard.writeText($("email").textContent).then(() => { status.textContent = "Email address copied."; })
+    .catch(() => {
+      const r = document.createRange(); r.selectNodeContents($("email"));
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      status.textContent = "Address selected. Press Ctrl+C or Cmd+C to copy.";
+    });
+});
+
+const HASH = { visualisation: "viz", analytics: "analytics", ml: "ml", ai: "ai" };
+let start = HASH[location.hash.slice(1)] || null;
+if (!start) { try { const s = localStorage.getItem("pf-area"); if (AREAS.some(a => a.id === s)) start = s; } catch (_) {} }
+setArea(start || "viz");
+</script>
+
+</body>
+</html>
