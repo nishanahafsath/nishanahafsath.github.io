@@ -7,8 +7,8 @@ Personal portfolio site for Nishana Hafsath, Power BI Specialist and Data Analys
 ## What's here
 
 - `index.html`: the portfolio page (profile, 16 dashboards, method, skills, experience, contact)
-- `img/`: dashboard screenshots used in the gallery
-- `pdf/`: full dashboard collections (Volume 1 and Volume 2)
+- `*.jpg`: dashboard screenshots used in the gallery
+- `PowerBI_Portfolio_Vol1.pdf`, `PowerBI_Portfolio_Vol2.pdf`: full dashboard collections
 
 ## Dashboards
 
